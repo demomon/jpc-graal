@@ -1,0 +1,19 @@
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "gradle.plugin.com.palantir.graal:gradle-graal:0.2.0-4-g255fd1f"
+  }
+}
+
+apply plugin: "com.palantir.graal"
+
+
+graal {
+    mainClass 'com.github.demomon.jpc.graal.App'
+    outputName 'hello-world'
+    graalVersion '1.0.0-rc9'
+}

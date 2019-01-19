@@ -10,5 +10,6 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     --no-install-recommends
 RUN wget -q0 https://github.com/oracle/graal/releases/download/vm-${VERSION}/graalvm-ce-${VERSION}-linux-amd64.tar.gz -o graalvm-ce-${VERSION}-linux-amd64.tar.gz
+
 ENV PATH /graalvm-ce-${VERSION}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 WORKDIR /usr/src
